@@ -29,8 +29,39 @@ console.log(firstName + ' is married? ' + isMarried);
 age = 'twenty eight';
 job = 'driver';
 
-alert(firstName + ' is married? ' + isMarried);
+console.log(firstName + ' is married? ' + isMarried);
 
 
-var lastName = prompt('whit is his last name');
-alert(firstName + ' ' + lastName);
+// var lastName = prompt('whit is his last name');
+// console.log(firstName + ' ' + lastName);
+
+
+// basic javascript operators
+var year, yearMark, yearJohn
+year = 2020;
+ageJohn = 28;
+ageMark = 33;
+
+// Math operators
+yearJohn = year - ageJohn;
+yearMark = year - ageMark;
+
+console.log(yearJohn);
+console.log(yearMark);
+console.log(year + 2);
+console.log(year * 2);
+console.log(year / 10);
+
+// Logical operators
+
+var johnOlder = ageJohn < ageMark;
+console.log(johnOlder);
+
+
+// typeof operator
+
+console.log(typeof johnOlder);
+console.log(typeof ageJohn);
+console.log(typeof 'Mark is the Oldest');
+
+// Operator precedence
