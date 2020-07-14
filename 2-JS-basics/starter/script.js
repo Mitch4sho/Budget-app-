@@ -65,3 +65,16 @@ console.log(typeof ageJohn);
 console.log(typeof 'Mark is the Oldest');
 
 // Operator precedence
+
+var now = 2018;
+var yearJohn = 1989;
+var fullAge = 18;
+// multiple operators
+var isFullAge = now - yearJohn >= fullAge;
+console.log(isFullAge);
+
+// Grouping
+var ageJohn = now - yearJohn;
+var ageMark = 35;
+var average = (ageJohn + ageMark) / 2; // this is grouping ageJOhn and AgeMark variables together so the precendece first in the order of operation instead of last without the grouping 
+console.log(average);
