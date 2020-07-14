@@ -78,3 +78,27 @@ var ageJohn = now - yearJohn;
 var ageMark = 35;
 var average = (ageJohn + ageMark) / 2; // this is grouping ageJOhn and AgeMark variables together so the precendece first in the order of operation instead of last without the grouping 
 console.log(average);
+
+//  Coding challenge #1
+
+// storing marks height and mass 
+var markMass, markHeight, markBmi;
+
+markMass = 78;
+markHeight = 1.69;
+markBmi = markMass / (markHeight * markHeight);
+
+
+// storing johns height and mass 
+var johnMass, johnHeight, johnBmi;
+
+johnMass = 92;
+johnHeight = 1.95;
+johnBmi = johnMass / (johnHeight * johnHeight);
+
+
+console.log(johnBmi, markBmi);
+
+
+var markVsJohn = markBmi > johnBmi;
+console.log("is mark\'s BMI higher than john\'s? " + markVsJohn);
