@@ -134,3 +134,17 @@ if (markBmi > johnBmi) {
     console.log("Marks BMI is way Higher")
 } else
     console.log("John your getting fat buddy")
+
+// Boolean Logic 
+firstName = 'John';
+var age = 30;
+
+if (age <= 12) {
+    console.log(firstName + ' is a boy.')
+} else if (age <= 19) {
+    console.log(firstName + ' is a teenager');
+} else if (age >= 20 && age <= 25) {
+    console.log(firstName + ' is a young man')
+} else {
+    console.log(firstName + ' is a man')
+}
