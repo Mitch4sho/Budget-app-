@@ -102,3 +102,35 @@ console.log(johnBmi, markBmi);
 
 var markVsJohn = markBmi > johnBmi;
 console.log("is mark\'s BMI higher than john\'s? " + markVsJohn);
+
+//  If/ else statements
+var firstName = 'john';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' is  single')
+}
+// using a boolean 
+var isMarried = true;
+if (isMarried) {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' is  single')
+}
+
+
+//  making the coding challenge better 
+var johnMass, johnHeight, johnBmi;
+
+johnMass = 92;
+johnHeight = 1.95;
+johnBmi = johnMass / (johnHeight * johnHeight);
+
+
+console.log(johnBmi, markBmi);
+if (markBmi > johnBmi) {
+    console.log("Marks BMI is way Higher")
+} else
+    console.log("John your getting fat buddy")
