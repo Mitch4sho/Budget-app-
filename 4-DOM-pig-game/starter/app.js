@@ -10,21 +10,35 @@ GAME RULES:
 */
 
 
-var scores, roundScore, activePlayer, dice, gamePlaying;
+var scores, roundScore, activePlayer, dice, gamePlaying, diceArray;
 
 init();
 
-document.querySelector('.btn-roll').addEventListener('click', function () {
 
+document.querySelector('.btn-roll').addEventListener('click', function () {
     if (gamePlaying) {
         // 1. Random Number generator 
-        var dice = Math.floor(Math.random() * 6) + 1;
+        dice = Math.floor(Math.random() * 6) + 1;
 
         // 2. Display results
         var diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
         diceDOM.src = 'dice-' + dice + '.png';
 
+        //for new rule 
+        diceArray.unshift(dice);
+
+        if (diceArray[0] && diceArray[1] === 6) {
+            // Player loses all points
+            scores[activePlayer] = 0;
+
+            //move to the next player
+            nextPlayer();
+        }
+        // removes the 3rd index in the array
+        if (2 < diceArray.length) {
+            diceArray.pop();
+        }
 
         //3. update the round score IF the rolled was NOT 1
         if (dice !== 1) {
@@ -37,6 +51,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         }
     }
 });
+
 
 document.querySelector('.btn-hold').addEventListener('click', function () {
     if (gamePlaying) {
@@ -68,6 +83,7 @@ function init() {
     scores = [0, 0];
     roundScore = 0;
     activePlayer = 0;
+    diceArray = [];
     gamePlaying = true;
 
     document.querySelector('.dice').style.display = 'none ';
